@@ -11,7 +11,9 @@
 #define ZY_ScreenHeight             [UIScreen mainScreen].bounds.size.height
 #define ZY_ScreenWidth              [UIScreen mainScreen].bounds.size.width
 
-#define ZY_CancelButtonHeight       49.f    // 取消按钮的高度
+#define is_iPhoneX ((int)((ZY_ScreenHeight / ZY_ScreenWidth) * 100) == 216)?YES:NO
+
+#define ZY_CancelButtonHeight       ((is_iPhoneX)?83.0f:49.0f)    // 取消按钮的高度
 
 #define ZY_ItemCellHeight           123.f   // 每个item的高度
 #define ZY_ItemCellWidth            72.f    // 每个item的宽度

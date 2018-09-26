@@ -52,6 +52,10 @@
     // 取消按钮
     self.cancelButton.frame = CGRectMake(0, self.frame.size.height - ZY_CancelButtonHeight, ZY_ScreenWidth, ZY_CancelButtonHeight);
     
+    if (is_iPhoneX) {
+        [self.cancelButton setTitleEdgeInsets:UIEdgeInsetsMake(0, 0, 30, 0)];
+    }
+    
     // TableView
     self.tableView.frame = CGRectMake(0, self.titleHeight, ZY_ScreenWidth, self.dataArray.count * ZY_ItemCellHeight);
     
